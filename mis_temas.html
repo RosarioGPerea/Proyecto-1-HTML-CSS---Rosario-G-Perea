@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="CSS/normalize.css" />
+  <link rel="preconnect" href="[https://fonts.googleapis.com](https://fonts.googleapis.com/)" />
+  <link rel="preconnect" href="[https://fonts.gstatic.com](https://fonts.gstatic.com/)" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Krub:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+    rel="stylesheet" />
+  <meta name="description" content="Esta es una página web de una compositora aún poco conocida, pero por descubrir" />
+  <meta author="Creada por la freelance Rocío Free" />
+  <meta keywords="música, compositora, piano, sintetizador, artcore" />
+  <link rel="preload" href="./style.css" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Skye Music</title>
+</head>
+
+<body>
+  <!--  -//----------PORTADA Y TÍTULO----------//-  -->
+
+  <header>
+
+    <!-- ----BARRA DE NAVEGACIÓN----- -->
+
+    <nav class="navegacion-principal">
+
+      <ul id="nav">
+        <li>
+          <a href="./index.html">
+            <img class="logotipo" src="assets/images/Logo SKYE V2.png" alt="Logotipo Skye Music" />
+            <h1>Skye Music</h1>
+            <a />
+        </li>
+        <li>
+          <a class="hover" href="./index.html">Inicio</a>
+        </li>
+        <li>
+          <a class="hover" href="./conoceme.html">Conóceme</a>
+        </li>
+        <li>
+          <a class="hover" href="./mis_temas.html">Composiciones</a>
+        </li>
+
+        <li>
+          <a class="hover" href="./index.html#contacto">Contacto</a>
+        </li>
+      </ul>
+
+    </nav>
+
+  </header>
+  <main>
+
+    <!--  -- // ----------SINTETIZADOR-REPRODUCTOR---------- // --  -->
+
+    <section id="Sintetizador">
+
+      <h2 class="h2_MT">Mis Temas</h2>
+
+      <div id="main-synth-wrapper">
+
+
+        <div id="ruedas">
+          <div class="rueda_iz"></div>
+          <div class="rueda_iz"></div>
+          <div class="rueda_iz"></div>
+          <div class="rueda_iz"></div>
+          <div class="rueda_iz"></div>
+        </div>
+
+        
+        <div id="padContainer">
+          <div class="pad" data-track-name="Crystal_Cut" onclick="playTrack('Crystal', this)">
+            <img src="./covers/1.png" alt="Crystal Monster" />
+            <span>Crystal Monster</span>
+          </div>
+
+          <div class="pad" data-track-name="Ghostly_Cut" onclick="playTrack('Ghostly', this)">
+            <img src="covers/PORTADA GHOSTLY ASHES.png" alt="Ghostly Ashes" />
+            <span>Ghostly Ashes</span>
+          </div>
+
+          <div class="pad" data-track-name="Gravity_Cut" onclick="playTrack('Gravity', this)">
+            <img src="covers/PORTADA GRAVITY ZERO.png" alt="Gravity Zero" />
+            <span>Gravity Zero</span>
+          </div>
+
+          <div class="pad" data-track-name="Infinito_Cut" onclick="playTrack('Infinito', this)">
+            <img src="covers/PORTADA INFINITO ETERNO.png" alt="Infinito Eterno" />
+            <span>Infinito Eterno</span>
+          </div>
+
+          <div class="pad" data-track-name="Loneliness_Cut" onclick="playTrack('Loneliness', this)">
+            <img src="covers/PORTADA LONELINESS.png" alt="Loneliness" />
+            <span>Loneliness</span>
+          </div>
+
+        </div>
+
+        <div id="keyboard">
+
+          <div class="white-keys-container">
+
+            <div class="key white" data-note="C" onclick="playNote(this, 'C')"></div>
+
+            <div class="key white" data-note="D" onclick="playNote(this, 'D')"></div>
+
+            <div class="key white" data-note="E" onclick="playNote(this, 'E')">
+            </div>
+
+            <div class="key white" data-note="F" onclick="playNote(this, 'F')">
+            </div>
+
+            <div class="key white" data-note="G" onclick="playNote(this, 'G')">
+            </div>
+
+            <div class="key white" data-note="A" onclick="playNote(this, 'A')">
+            </div>
+
+            <div class="key white" data-note="B" onclick="playNote(this, 'B')">
+            </div>
+            <div class="key white" data-note="G" onclick="playNote(this, 'G')">
+            </div>
+
+            <div class="key white" data-note="A" onclick="playNote(this, 'A')">
+            </div>
+
+            <div class="key white" data-note="B" onclick="playNote(this, 'B')">
+            </div>
+
+          </div>
+          <div class="black-keys-container">
+
+            <div class="key black" data-note="Cb1" onclick="playNote(this,'Cb1')">
+            </div>
+
+            <div class="key black" data-note="Db1" onclick="playNote(this,'Db1')">
+            </div>
+
+            <div class="none" data-note="Fb1" onclick="playNote(this,'Fb1')">
+            </div>
+
+            <div class="key black" data-note="Gb1" onclick="playNote(this,'Gb1')">
+            </div>
+
+            <div class="key black" data-note="Ab1" onclick="playNote(this,'Ab1')">
+            </div>
+            <div class="key black" data-note="Gb1" onclick="playNote(this,'Gb1')">
+            </div>
+
+            <div class="none" data-note="Ab1" onclick="playNote(this,'Ab1')">
+            </div>
+            <div class="key black" data-note="Gb1" onclick="playNote(this,'Gb1')">
+            </div>
+
+            <div class="key black" data-note="Ab1" onclick="playNote(this,'Ab1')">
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+      </div>
+      <script src="script.js"></script>
+    </section>
+
+  </main>
+
+  <!--  -- // ----------PIÉ DE PÁGINA---------- // --  -->
+
+  <footer>
+    <div class="wrap">
+      <div>
+        <ul class="redes">
+
+          <li>
+            <a href="https://www.instagram.com/xskyemusicx?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
+              <img src="./assets/Iconos/instagram.png"
+                href="https://open.spotify.com/intl-es/artist/2Pvi4JQnug8oNbrD0VKlBe" alt="Instagram">
+            </a>
+          </li>
+
+          <li>
+            <a href="https://www.tiktok.com/@xskyemusicx?is_from_webapp=1&sender_device=pc">
+              <img src="./assets/Iconos/tik-tok.png" alt="tik-tok">
+            </a>
+          </li>
+
+          <li>
+            <a href="https://open.spotify.com/intl-es/artist/2Pvi4JQnug8oNbrD0VKlBe?si=9iuo5AvFRi2PRWDKe_WFOg">
+              <img src="./assets/Iconos/spotify.png" alt="Spotify">
+            </a>
+          </li>
+
+          <li>
+            <a href="https://music.youtube.com/channel/UCTkX7xzCc646PYHKJsuCg2w?feature=shared">
+              <img src="./assets/Iconos/youtube.png" alt="Youtube">
+            </a>
+          </li>
+
+        </ul>
+      </div>
+      <div>
+        <ul class="url">
+          <li>
+            <a class="hover" href="./index.html">Inicio</a>
+          </li>
+          <li>
+            <a class="hover" href="./conoceme.html">Conóceme</a>
+          </li>
+          <li>
+            <a class="hover" href="./mis_temas.html">Composiciones</a>
+          </li>
+
+          <li>
+            <a class="hover" href="./contacto.html">Contacto</a>
+          </li>
+
+        </ul>
+      </div>
+
+      <div class="derechos">
+        <p>Página creada por <a href="#"><Img src="./assets/images/Drawing svgz.webp" alt="Logotipo Rocío Free" /> Rocío
+            Free</a>. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
