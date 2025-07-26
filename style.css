@@ -10,10 +10,13 @@
   --Fucsia: #a6355b;
   --Blanco: #ffffff;
   --Degradado: #d4138d28;
+  --Randoma11y_primario: #930054;
+  --Randoma11y_secundario: #f9fdef;
+  --Randoma11y_terciario: #930053ab;
 }
 
 * {
-  color: var(--Blanco);
+  color: var(--Randoma11y_secundario);
   font-family: "Krub", sans-serif;
   box-sizing: border-box;
   font-size: 10px;
@@ -36,13 +39,19 @@ body {
   height: 100vw;
   width: auto;
   margin: 0;
-  background: var(--Rosa);
-  background-image: linear-gradient(
+  background: var(--Randoma11y_primario);
+  background: #f9fdef;
+  background: radial-gradient(
+    circle,
+    var(--Randoma11y_secundario) 0%,
+    var(--Randoma11y_primario) 80%
+  );
+  /* background-image: linear-gradient(
     90deg,
     var(--Rosa) 0%,
     var(--Fucsia) 47%,
     var(--Amarillo) 88%
-  );
+  ) */
   /* background-color: var(--Negro); */
 }
 a {
@@ -66,13 +75,8 @@ header {
 }
 
 header nav {
-  background: var(--Rosa);
-  background-image: linear-gradient(
-    90deg,
-    var(--Rosa) 0%,
-    var(--Fucsia) 47%,
-    var(--Amarillo) 88%
-  );
+  background: var(--Randoma11y_terciario);
+
   width: 100%;
   height: 45px;
   position: fixed;
@@ -112,12 +116,12 @@ header > nav > ul > li > a {
 }
 
 header > nav > ul > li > .hover:hover {
-  background: var(--Rosa);
+  background: var(--Randoma11y_terciario);
   background-image: linear-gradient(
     90deg,
-    var(--Amarillo) 0%,
-    var(--Fucsia) 47%,
-    var(--Rosa) 88%
+    var(--Randoma11y_terciario) 0%,
+    var(--Randoma11y_primario) 47%,
+    var(--Randoma11y_terciario) 88%
   );
   border: solid;
   border-radius: 5px;
@@ -127,7 +131,6 @@ header > nav > ul > li > .hover:hover {
   padding: 5px;
 }
 
-
 /* <!-- ----MAIN----- -->  */
 
 main section {
@@ -136,7 +139,9 @@ main section {
 
 main > section > .conoceme {
   display: flex;
-  background-color: var(--Oscuro);
+  background-color: var(--Randoma11y_primario);
+  border-color: var(--Randoma11y_terciario);
+  box-shadow: 1px 1px 6px var(--Randoma11y_secundario);
   border-radius: 20px;
   max-width: 85vw;
   justify-self: center;
@@ -153,12 +158,12 @@ main .conoceme .texto {
 }
 
 main .conoceme h2 {
-  text-shadow: 2px 2px 5px var(--Fucsia);
+  text-shadow: 2px 2px 5px var(--Noche);
   font-size: 1.5rem;
 }
 
 main .conoceme .texto ul {
-  padding: 10px;
+  padding: 15px;
 }
 
 main .conoceme .texto .p_3 {
@@ -167,22 +172,21 @@ main .conoceme .texto .p_3 {
 }
 
 main .conoceme .foto {
-  height: 90%;
+  height: 100%;
   width: 40vw;
   border: solid;
+  border: none;
   border-radius: 20px;
-  border-color: var(--Rosa);
-  box-shadow: 2px 2px 4px var(--Fucsia);
 }
 
 main .conoceme .boton {
-  color: var(--Fucsia);
+  color: var(--Randoma11y_secundario);
   font-family: Krub, "Trebuchet MS";
-  font-size: 2rem;
-  font-weight: 700;
-  padding: 5px;
-  text-shadow: 1px 1px 1px var(--Rosa);
-  background-color: var(--Noche);
+  font-size: 1.5rem;
+  font-weight: 600;
+  /* padding: 5px;
+  text-shadow: 0.5px 0.5px 1px var(--Randoma11y_secundario);
+  background-color: var(--Randoma11y_terciario);
   border: solid;
   border-width: 3px;
   border-image: linear-gradient(
@@ -192,11 +196,32 @@ main .conoceme .boton {
       var(--Amarillo) 88%
     )
     1;
+    background: var(--Randoma11y_terciario);
+  border-image: linear-gradient(
+    90deg,
+    var(--Noche) 0%,
+    var(--Randoma11y_secundario) 47%,
+    var(--Noche) 88%
+  )1; */
+
+  background: var(--Noche);
+  background-image: linear-gradient(
+    90deg,
+    var(--Randoma11y_terciario) 0%,
+    var(--Randoma11y_primario) 47%,
+    var(--Randoma11y_terciario) 88%
+  );
+  border: solid;
+  border-radius: 5px;
+  border-width: 1px;
+  border-color: var(--Noche);
+  box-shadow: 1px 1px 1px var(--Gris);
+  padding: 5px;
 }
 section .conoceme .boton:hover {
   transform: scale(1.1);
-  color: var(--Rosa);
-  text-shadow: 1px 1px 1px var(--Fucsia);
+  color: var(--Randoma11y_secundario);
+  text-shadow: 0.5px 0.5px 1px var(--Randoma11y_secundario);
   background-color: var(--Noche);
   cursor: pointer;
 }
@@ -219,7 +244,7 @@ section > img {
   justify-content: center;
   align-items: center;
   width: 100%;
-  max-height: 40vw;
+  max-height: 25vw;
   overflow: hidden;
   opacity: 50%;
   object-fit: cover;
@@ -229,7 +254,9 @@ section > img {
 
 section > .wrap {
   display: flex;
-  background-color: var(--Oscuro);
+  background-color: var(--Randoma11y_primario);
+   border-color: var(--Randoma11y_terciario);
+  box-shadow: 1px 1px 6px var(--Randoma11y_secundario);
   border-radius: 20px 20px 20px 20px;
   max-width: 85vw;
   justify-self: center;
@@ -241,8 +268,8 @@ section > .wrap > div {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 0.1fr 1fr 1fr;
-  gap: 10px;
-  margin: 10px;
+  gap: 20px;
+  margin: 20px;
 }
 section > .wrap img {
   width: 100%;
@@ -256,14 +283,14 @@ section > .wrap h2:nth-child(1) {
   grid-row: 1/2;
   justify-content: center;
   align-items: center;
-  text-shadow: 2px 2px 5px var(--Fucsia);
-  font-size: 2.5rem;
+  text-shadow: 2px 2px 5px var(--Noche);
+  font-size: 1.5rem;
 }
 
 section > .wrap h2:nth-child(1):hover {
   transform: scale(1.1);
-  color: #f20779;
-  text-shadow: 1px 1px 1px var(--Fucsia);
+  color: var(--Randoma11y_secundario);
+  text-shadow: 1px 1px 1px var(--Noche);
   /* background-color: var(--Noche);
   background-size: contain; */
   cursor: pointer;
@@ -301,22 +328,24 @@ section > .wrap a:nth-child(6) {
 
 /* <!-- ----SECCIÓN CONTACTO----- -->  */
 
-fieldset > h2 {
-  text-shadow: 2px 2px 5px var(--Oscuro);
-  font-size: 2.5rem;
+section fieldset > h2 {
+  color: var(--Randoma11y_primario);
+  text-shadow: 1px 1px 0.5px var(--Randoma11y_secundario);
+  font-size: 1.8rem;
 }
 section #contacto {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: var(--Oscuro);
+  background-color: var(--Randoma11y_primario);
+   border-color: var(--Randoma11y_terciario);
+  box-shadow: 1px 1px 6px var(--Randoma11y_secundario);
   border-radius: 20px 20px 20px 20px;
   width: 85vw;
   height: auto;
   justify-self: center;
   padding: 20px;
-  
- 
+  gap: 20px;
 }
 
 section fieldset {
@@ -331,20 +360,29 @@ section fieldset {
 }
 
 .submit > input {
-  color: var(--Fucsia);
+  color: var(--Randoma11y_secundario);
   font-family: Krub, "Trebuchet MS";
   font-size: 1.2rem;
   font-weight: 800;
+  background: var(--Noche);
+  background-image: linear-gradient(
+    90deg,
+    var(--Randoma11y_terciario) 0%,
+    var(--Randoma11y_primario) 47%,
+    var(--Randoma11y_terciario) 88%
+  );
+  border: solid;
+  border-radius: 5px;
+  border-width: 1px;
+  border-color: var(--Noche);
+  box-shadow: 1px 1px 1px var(--Gris);
   padding: 5px;
-  text-shadow: 1px 1px 1px var(--Rosa);
-  background-color: var(--Noche);
-  border: 3px solid;
-  border-image: linear-gradient(90deg, #d4138d 0%, #a6355b 47%, #c9ba30 88%) 1;
+  margin: 5px;
 }
 .submit > input:hover {
   transform: scale(1.1);
-  color: var(--Rosa);
-  text-shadow: 1px 1px 1px var(--Fucsia);
+  color: var(--Randoma11y_secundario);
+  text-shadow: 0.5px 0.5px 0.5px var(--Randoma11y_secundario);
   background-color: var(--Noche);
   cursor: pointer;
 }
@@ -354,11 +392,11 @@ main #contacto label {
 }
 
 form .text_box {
-  width: 100%;
+  width: 95%;
   height: auto;
-  border: 2px solid var(--Fucsia);
+  border: 2px solid var(--Randoma11y_primario);
   border-radius: 5px;
-  box-shadow: 2px 2px 3px var(--Rosa);
+  box-shadow: 1px 1px 6px var(--Randoma11y_secundario);
   padding: 5%;
   margin: 3%;
   color: var(--Noche);
@@ -368,13 +406,12 @@ form .text_box {
 @media (max-width: 768px) {
   #contacto .textWrap {
     width: 100%;
-    height:auto;
+    height: auto;
   }
   #contacto img {
     display: none;
   }
 }
-
 
 /* <!-- ----FOOTER----- -->  */
 
@@ -383,7 +420,7 @@ footer {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  height: 35vh;
+  height: 62vh;
 
   margin: 0;
   padding: 0;
@@ -396,7 +433,7 @@ footer > .wrap {
   background-color: var(--Degradado);
   height: 100%;
   width: 100%;
-  padding: 0 20px;
+  padding: 20px;
 }
 
 footer ul {
@@ -418,7 +455,7 @@ footer li > a {
 
 footer li > a:hover {
   color: var(--Rosa);
-  text-shadow: 1px 1px 1px var(--Fucsia);
+  text-shadow: 0.5px 0.5px 0.5px var(--Randoma11y_secundario);
   cursor: pointer;
 }
 
@@ -429,7 +466,7 @@ footer .url {
 }
 
 footer li img {
-  margin: 10px;
+  margin: 5px;
   width: 20px;
   filter: drop-shadow(1px 1px 0px var(--Blanco));
 }
@@ -437,13 +474,14 @@ footer li img {
 footer .derechos {
   font-weight: 600;
   display: flex;
-  top: 90px;
+  justify-content: center;
+  margin: 0;
 }
 
 footer .derechos > p a {
   font-weight: 700;
   font-size: large;
-  text-shadow: 2px 2px 5px var(--Fucsia);
+  text-shadow: 0.5px 0.5px 1px var(--Fucsia);
 }
 
 footer .derechos > p img {
@@ -451,18 +489,7 @@ footer .derechos > p img {
   filter: drop-shadow(0.5px 0.5px 0px var(--Blanco));
 }
 
-
-
-
-
-
-
-
-
 /* <!-- ----PÁGINA CONÓCEME----- -->  */
-
-
-
 
 main .contenedor {
   max-width: 85vw;
@@ -477,7 +504,6 @@ main h2 {
   text-shadow: 2px 2px 5px var(--Rosa);
   font-size: 2rem;
 }
-
 
 main .historia p {
   font-size: 1.3rem;
@@ -501,12 +527,13 @@ main .historia .final {
   font-weight: bold;
   margin-top: 30px;
   color: var(--Rosa);
-  font-size:1.6rem;
+  font-size: 1.6rem;
   text-shadow: 0.5px 0.5px 1px var(--Negro);
 }
 
 /* Estilos para imágenes */
-.imagenDerecha, .imagenIzquierda {
+.imagenDerecha,
+.imagenIzquierda {
   width: 40%;
   max-width: 300px;
   height: auto;
@@ -531,7 +558,8 @@ main .historia .final {
 }
 
 @media (max-width: 768px) {
-  .imagenDerecha, .imagenIzquierda {
+  .imagenDerecha,
+  .imagenIzquierda {
     float: none;
     display: block;
     margin: 20px auto;
@@ -546,7 +574,6 @@ main .historia .final {
 }
 
 /* <!-- ----SINTETIZADOR----- -->  */
-
 
 #main-synth-wrapper {
   background: #1a1a1a;
@@ -578,7 +605,6 @@ main .historia .final {
   flex-direction: column;
   columns: 2;
   align-items: center;
-
 }
 
 #padContainer {
@@ -627,11 +653,10 @@ main .historia .final {
   gap: 10px;
 }
 .pad {
-  width:90%;
-  height:40%;
+  width: 90%;
+  height: 40%;
   display: flex;
   flex-direction: row;
-
 
   cursor: pointer;
   border: solid;
@@ -639,8 +664,8 @@ main .historia .final {
   border-radius: 10px;
   background: black;
   transition: transform 0.2s, background-color 0.3s;
-  
-  overflow:hidden ;
+
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -684,17 +709,15 @@ main .historia .final {
   min-width: 550px;
   display: flex;
   justify-content: center;
-  
 }
 
 .white-keys-container {
-   position: absolute;
+  position: absolute;
   display: flex;
   height: 100%;
   width: 90%;
   justify-content: center;
   z-index: 1;
-  
 }
 
 .black-keys-container {
@@ -706,7 +729,7 @@ main .historia .final {
     right: 0; */
   height: 65%;
   z-index: 2;
-  
+
   /* margin-left: calc((100 / var(--design-width) * 100vw) * 0.7); */
 }
 
